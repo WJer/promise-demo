@@ -16,7 +16,7 @@ function getUrl(url){
 			reject(new Error('调用失败'));
 		}
 		xhr.send();
-	})
+	});
 }
 
 getUrl('http://www.baidu.com').then(function(res) {

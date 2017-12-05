@@ -3,32 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-
+	<script type="text/javascript">
+		window.addEventListener('load', function() {
+			console.log(1);
+		});
+		document.addEventListener('DOMContentLoaded', function() {
+			console.log(2);
+		});
+	</script>
 </head>
 <body>
-	
+	<div>hello world</div>
 </body>
 <script type="text/javascript" src="wj-promise.js"></script>
-<script type="text/javascript">
-	var a = new Promise(function(resolve){
-		setTimeout(function(){
-			resolve(100);
-		},100);
-	});
-	var b = new Promise(function(resolve){
-		setTimeout(function(){
-			resolve(500);
-		},500);
-	});
-	var c = new Promise(function(resolve){
-		setTimeout(function(){
-			resolve(1000);
-		},1000);
-	});
-
-	Promise.race([a,b,c]).then(function(val){
-		console.log(val);
-	});
-
-</script>
 </html>
